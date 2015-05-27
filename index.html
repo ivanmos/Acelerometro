@@ -5,6 +5,8 @@
 
     <script type="text/javascript" charset="utf-8" src="../geo-master/cordova.js"></script>
     <script type="text/javascript" charset="utf-8">
+	
+	document.addEventListener("deviceready", arrancar, false);
 
     // device APIs are available
     //
@@ -19,10 +21,13 @@ function onError() {
     alert('onError!');
 };
 
+function arrancar(){
+
 var options = { frequency: 3000 };  // Update every 3 seconds
 
 var watchID = navigator.accelerometer.watchAcceleration(onSuccess, onError, options);
 
+}
     </script>
   </head>
   <body>
